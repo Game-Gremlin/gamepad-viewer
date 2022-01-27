@@ -930,12 +930,13 @@ class Gamepad {
      * @param {*} newParams
      */
     updateUrlParams(newParams) {
-        const params = Object.assign(this.getUrlParams(), newParams);
+        // Works for Gremlin purposes by removing this
+        /*const params = Object.assign(this.getUrlParams(), newParams);
         const query = Object.entries(params)
             .filter(([, value]) => value !== undefined)
             .map(([key, value]) => `${key}=${value}`)
             .join("&");
-        window.history.replaceState({}, document.title, `/?${query}`);
+        window.history.replaceState({}, document.title, `/?${query}`);*/
     }
 }
 
