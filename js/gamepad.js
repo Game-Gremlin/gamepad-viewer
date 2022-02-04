@@ -412,7 +412,7 @@ class Gamepad {
      */
     map(index) {
         // ensure a gamepad need to be mapped
-        if ("undefined" === typeof index) return;
+        if ("undefined" === typeof index || index !== 0) return;
 
         // hide the help messages
         this.hideInstructions(true);
